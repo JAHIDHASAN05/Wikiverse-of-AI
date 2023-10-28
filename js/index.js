@@ -1,4 +1,5 @@
 const LoadAiData=async(limit)=>{
+    toggleSpinner(true)
     const url=`https://openapi.programming-hero.com/api/ai/tools`
     const res = await fetch(url)
     const data= await res.json()
@@ -24,7 +25,7 @@ const displayAiData=(datas ,limit)=>{
         aiDiv.classList.add("col")
         aiDiv.innerHTML=`
                     <div class="card h-100">
-                        <img src="${data.image}" class="card-img-top" alt="...">
+                        <img src="${data.image}" class="card-img-top" alt="No picture Found">
                         <div class="card-body">
                           <h5 class="card-title">Feature</h5>
                           <ol>
@@ -44,13 +45,28 @@ const displayAiData=(datas ,limit)=>{
                     </div>
         `
         aiDataContainer.append(aiDiv)
+
         console.log(data)
       }
+
+      toggleSpinner(false)
 }
 
 // <!-- see more btn function -->
 document.getElementById("btn-see-more").addEventListener("click", function(){
     LoadAiData(true)
 })
+
+// <!-- load spinner funtion -->
+ function toggleSpinner(isLoading){
+   const loaderContainer=document.getElementById("loader")
+    if(isLoading){
+        loaderContainer.classList.remove("d-none")
+    }
+    else{
+        loaderContainer.classList.add("d-none")
+    }
+ }
+
 
 LoadAiData()
