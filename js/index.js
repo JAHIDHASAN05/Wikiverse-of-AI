@@ -110,7 +110,7 @@ ModalDetailBody.innerHTML=`
                         <h4 class="card-text mb-5">${data.description}</h4>                        
                         <div class="d-flex justify-content-around mb-5">
                             <div style="height:100px" class="w-25 bg-light p-3 d-flex justify-content-center align-items-center text-center">
-                                ${data.pricing[0].price} <br> 
+                             ${data.pricing[0].price ==0 ? "free" :`${data.pricing[0].price }` }<br> 
                                 ${data.pricing[0].plan}
                             </div>
                             <div style="height:100px" class="w-25 bg-light p-3 d-flex justify-content-center align-items-center text-center">
