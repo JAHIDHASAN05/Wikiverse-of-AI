@@ -35,13 +35,15 @@ const displayAiData=(datas ,limit)=>{
                          
                           </ol>
                         </div>
-                        <div class="card-footer d-flex justify-content-between">
+                        <div class="card-footer d-flex justify-content-between ">
                             <div>
                                 <h5>${data.name}</h5>
                                  <p>Date:${data.published_in}</p>
                              </div>
-                            <button class="btn btn-primary">Detail</button>
-                        </div>
+                             <button  class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#phone-detail">Detail</button>
+
+                             </div>
+
                     </div>
         `
         aiDataContainer.append(aiDiv)
