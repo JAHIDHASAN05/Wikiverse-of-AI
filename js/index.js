@@ -90,6 +90,7 @@ function sortDataByDate(datas,) {
   displayAiData(datas);
 }
 
+
 //  detail modal data load and display function
 
 const loadAiDetail= async(id)=>{
@@ -150,7 +151,7 @@ ModalDetailBody.innerHTML=`
             </div>
 
             <div class="card">
-                <img src="${data.image_link[0]}" class="card-img-bottom" alt="No Pictutre Found">
+                <img src="${data.image_link[0]}" class="card-img-bottom p-2" alt="No Pictutre Found">
                 <div class="card-body text-center ">
                      <h5 class="card-title">${data.input_output_examples[0].input}</h5>
                       <p class="card-text">${data.input_output_examples[0].output}</p>
