@@ -35,7 +35,7 @@ const displayAiData=(datas ,limit)=>{
                          
                           </ol>
                         </div>
-                        <div class="card-footer d-flex justify-content-between ">
+                        <div class="card-footer d-flex justify-content-between align-items-center ">
                             <div>
                                 <h5>${data.name}</h5>
                                  <p>Date:${data.published_in}</p>
