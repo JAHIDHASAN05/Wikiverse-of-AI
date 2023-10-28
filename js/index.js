@@ -71,11 +71,26 @@ document.getElementById("btn-see-more").addEventListener("click", function(){
  }
 
 
+// sort by date function
+function sortByDate(){
+  fetch('https://openapi.programming-hero.com/api/ai/tools')
+  .then(response => response.json())
+  .then(data => 
+    
+    
+    {
+   
+    sortDataByDate(data.data.tools);
+  })  
 
+}
+function sortDataByDate(datas,) {
+  datas.sort((a, b) => new Date(a.published_in) - new Date(b.published_in));
+  
+  displayAiData(datas);
+}
 
-
-
-//  detail modat data load and display function
+//  detail modal data load and display function
 
 const loadAiDetail= async(id)=>{
     const url=`https://openapi.programming-hero.com/api/ai/tool/${id}`
