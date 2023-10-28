@@ -73,6 +73,8 @@ document.getElementById("btn-see-more").addEventListener("click", function(){
 
 
 
+
+
 //  detail modat data load and display function
 
 const loadAiDetail= async(id)=>{
@@ -122,9 +124,9 @@ ModalDetailBody.innerHTML=`
                           <h3>Integrations:                          
                           </h3>
                           <ul>
-                            <li>${data.integrations[0]}</li>
-                            <li>${data.integrations[1]}</li>
-                            <li>${data.integrations[2]}</li>                            
+                            <li class="${data.integrations[0] ? '' : 'd-none'}">${data.integrations[0]}</li>
+                            <li class="${data.integrations[1] ? '' : 'd-none'}">${data.integrations[1]}</li>
+                            <li class="${data.integrations[2] ? '' : 'd-none'}">${data.integrations[2]}</li>                            
                           </ul>
                         </div>
                         
@@ -138,9 +140,11 @@ ModalDetailBody.innerHTML=`
                      <h5 class="card-title">${data.input_output_examples[0].input}</h5>
                       <p class="card-text">${data.input_output_examples[0].output}</p>
                 </div>
-                <div class="card-footer">
-                   
-                </div>
+                <span class="position-absolute end-0 badge text-bg-danger w-30 ${data.accuracy.score ? '' : 'd-none'}">
+                ${data.accuracy.score}% accuracy
+              </span>
+              
+              
             </div>          
 
 `
@@ -148,6 +152,11 @@ console.log(data.input_output_examples[0])
 
   console.log(data)
 }
+
+
+
+
+
 
 
 LoadAiData()
