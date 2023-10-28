@@ -29,9 +29,9 @@ const displayAiData=(datas ,limit)=>{
                         <div class="card-body">
                           <h5 class="card-title">Feature</h5>
                           <ol>
-                           <li>${data.features[0]}</li>
-                           <li>${data.features[1]}</li>
-                           <li>${data.features[2]}</li>
+                           <li  class="${data.features[0] ? '' : 'd-none'}">${data.features[0]}</li>
+                           <li  class="${data.features[1] ? '' : 'd-none'}">${data.features[1]}</li>
+                           <li  class="${data.features[2] ? '' : 'd-none'}">${data.features[2]}</li>
                          
                           </ol>
                         </div>
