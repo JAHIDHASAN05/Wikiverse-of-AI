@@ -32,6 +32,8 @@ const displayAiData=(datas ,limit)=>{
                            <li  class="${data.features[0] ? '' : 'd-none'}">${data.features[0]}</li>
                            <li  class="${data.features[1] ? '' : 'd-none'}">${data.features[1]}</li>
                            <li  class="${data.features[2] ? '' : 'd-none'}">${data.features[2]}</li>
+                           <li  class="${data.features[3] ? '' : 'd-none'}">${data.features[3]}</li>
+                           <li  class="${data.features[4] ? '' : 'd-none'}">${data.features[4]}</li>
                          
                           </ol>
                         </div>
